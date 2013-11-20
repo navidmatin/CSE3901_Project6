@@ -21,10 +21,10 @@
 	<h2>Participants in this event:</h2><br />
 	<table>
 		<% @event.users.sort_by {|h| [h["last_name"],h["first_name"]]}.each do |user| %>
-		<tr>
-			<td><%= link_to user.username, user %></td>
-			<td><%= user.last_name %></td>
-			<td><%= user.first_name %></td>
+		<tr class="<%= cycle('even-row', 'odd-row') %>">
+			<td class="cell"><%= link_to user.username, user %></td>
+			<td class="cell"><%= user.last_name %></td>
+			<td class="cell"><%= user.first_name %></td>
 		</tr>
 		<% end %>
 	</table>

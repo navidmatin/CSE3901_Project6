@@ -1,17 +1,23 @@
-<h1>Main Page</h1>
-<%= link_to 'Login', action: 'login' %> or <%= link_to 'Register', action: 'register' %>
+<div id="header">
+	<h1>Charity Fundraiser</h1>
+	<%= link_to 'Login', action: 'login' %> or <%= link_to 'Register', action: 'register' %>
+</div>
+<div id="body">
 <h2>Events</h2>
 <table>
   <tr>
 	<th>Location</th>
 	<th>Date</th>
 	<th>Time</th>
+	<th>Participants</th>
   </tr>
 <% @events.each do |event| %>
-  <tr>
+  <tr class="<%= cycle('even-row','odd-row') %>">
 	<td><%= link_to event.location, controller: 'events', action: 'show', id: event.id %></td>
-	<td><%= event.date.to_date %></td>
-	<td><%= event.date.to_s(:time) %></td>
+	<td class="cell"><%= event.date.to_date %></td>
+	<td class="cell"><%= event.date.to_s(:time) %></td>
+	<td class="cell-right"><%= event.users.count %></td>
   </tr>
 <% end %>
 </table>
+</div>
