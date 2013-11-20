@@ -1,0 +1,13 @@
+<h1>Login</h1>
+
+<%= form_tag("/users/register", method: 'post') do %>
+First Name: <%= text_field(:user, :first_name) %><br />
+Last Name: <%= text_field(:user, :last_name) %><br />
+Birthdate: <%= text_field(:user, :birthdate) %><br />
+Username: <%= text_field(:user, :username) %><br />
+Password: <%= password_field(:user, :password) %><br />
+Password again: <%= password_field(:user, :password_check) %><br />
+<%= submit_tag("Register") %>
+<% end %>
+
+<%= link_to "Home", action: "index" %>

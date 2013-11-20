@@ -1,0 +1,19 @@
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+<h3><%= @user.username %></h3>
+<p><%= @user.birthdate %></p>
+
+<h2><%= @user.first_name %>'s Events:</h2>
+<table>
+	<tr>
+		<th>Location</th>
+		<th>Date</th>
+		<th>Time</th>
+	</tr>
+	<% @user.events.sort_by {|h| [h["date"],h["time"]]}.each do |event| %>
+	<tr>
+		<td><%= link_to event.location, controller: "events", action: "show", id: event.id %></td>
+		<td><%= event.date %></td>
+		<td><%= event.time.to_s(:time) %></td>
+	</tr>
+	<% end %>
+</table>
