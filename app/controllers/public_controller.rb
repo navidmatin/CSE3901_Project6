@@ -7,5 +7,6 @@ class PublicController < ApplicationController
 	end
 
 	def register
+		@user = User.new
 	end
 end

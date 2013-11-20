@@ -1,12 +1,41 @@
 <h1>Register</h1>
 
 <%= form_tag("/users/register", method: 'post') do %>
-First Name: <%= text_field(:user, :first_name, autocomplete: :off) %><br />
-Last Name: <%= text_field(:user, :last_name, autocomplete: :off) %><br />
-Birthdate: <%= date_select(:user, :birthdate, start_year: 1900) %><br />
-Username: <%= text_field(:user, :username, autocomplete: :off) %><br />
-Password: <%= password_field(:user, :password) %><br />
-Password again: <%= password_field(:user, :password_confirmation) %><br />
+
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this event from being saved:</h2>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<div class="field">
+	<%= label(:user, :first_name, 'First Name') %><br />
+	<%= text_field(:user, :first_name, autocomplete: :off) %>
+</div>
+<div class="field">
+	<%= label(:user, :last_name, 'Last Name') %><br />
+	<%= text_field(:user, :last_name, autocomplete: :off) %>
+</div>
+<div class="field">
+	<%= label(:user, :birthdate, 'Birthdate') %><br />
+	<%= date_select(:user, :birthdate, start_year: DateTime.now.year - 100, end_year: DateTime.now.year) %>
+</div>
+<div class="field">
+	<%= label(:user, :username, 'Username') %><br />
+	<%= text_field(:user, :username, autocomplete: :off) %>
+</div>
+<div class="field">
+	<%= label(:user, :password, 'Password') %><br />
+	<%= password_field(:user, :password) %>
+</div>
+<div class="field">
+	<%= label(:user, :password_confirmation, 'Re-Enter Password') %><br />
+	<%= password_field(:user, :password_confirmation) %>
+</div>
 <%= submit_tag("Register") %>
 <% end %>
 

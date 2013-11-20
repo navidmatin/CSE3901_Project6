@@ -12797,3 +12797,2929 @@ Served asset /public.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:08:35 -0500
 Served asset /application.js - 304 Not Modified (44ms)
+
+
+Started GET "/public/register" for 127.0.0.1 at 2013-11-20 00:11:42 -0500
+Processing by PublicController#register as HTML
+  Rendered public/register.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:11:42 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:11:42 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:11:42 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:11:42 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:11:42 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:11:42 -0500
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:11:42 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:11:42 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:11:42 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:11:42 -0500
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:11:42 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 00:16:07 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"jane", "last_name"=>"doe", "birthdate(1i)"=>"1994", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"janedoe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = 'janedoe' LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 31ms
+
+ActionView::MissingTemplate (Missing template users/register, application/register with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/home/tj/CSE3901_Project6/app/views"
+):
+  app/controllers/users_controller.rb:11:in `register'
+
+
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 00:18:15 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"jane", "last_name"=>"doe", "birthdate(1i)"=>"1994", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"janedoe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = 'janedoe' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 27ms (Views: 14.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:18:15 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:18:15 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:18:15 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:18:15 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:18:15 -0500
+Served asset /jquery.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:18:15 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:18:15 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:18:15 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:18:15 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:18:15 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:18:15 -0500
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 00:21:56 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"jane", "last_name"=>"doe", "birthdate(1i)"=>"1994", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"janedoe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = 'janedoe' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (312.2ms)
+Completed 500 Internal Server Error in 321ms
+
+ActionView::Template::Error (undefined method `error_messages_for' for #<#<Class:0x97b0c74>:0x9548a40>):
+    1: <h1>Register</h1>
+    2: 
+    3: <%= form_tag("/users/register", method: 'post') do %>
+    4: 	<%= error_messages_for(:user) %>
+    5: First Name: <%= text_field(:user, :first_name, autocomplete: :off) %><br />
+    6: Last Name: <%= text_field(:user, :last_name, autocomplete: :off) %><br />
+    7: Birthdate: <%= date_select(:user, :birthdate, start_year: 1900) %><br />
+  app/views/public/register.html.erb:4:in `block in _app_views_public_register_html_erb__23379339_78266440'
+  app/views/public/register.html.erb:3:in `_app_views_public_register_html_erb__23379339_78266440'
+  app/controllers/users_controller.rb:11:in `register'
+
+
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (21.7ms)
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.1ms)
+
+
+Started GET "/public/register" for 127.0.0.1 at 2013-11-20 00:27:41 -0500
+Processing by PublicController#register as HTML
+  Rendered public/register.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    2: 
+    3: <%= form_tag("/users/register", method: 'post') do %>
+    4: 
+    5: <% if @user.errors.any? %>
+    6:   <div id="error_explanation">
+    7:     <h2><%= pluralize(@user.errors.count, "error") %> prohibited this event from being saved:</h2>
+    8:     <ul>
+  app/views/public/register.html.erb:5:in `block in _app_views_public_register_html_erb__23379339_81595210'
+  app/views/public/register.html.erb:3:in `_app_views_public_register_html_erb__23379339_81595210'
+
+
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.7ms)
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/public/register" for 127.0.0.1 at 2013-11-20 00:28:15 -0500
+Processing by PublicController#register as HTML
+  Rendered public/register.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 74ms (Views: 54.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:28:15 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:28:15 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:28:15 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:15 -0500
+Served asset /jquery.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:28:15 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:28:15 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:15 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:15 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:15 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:15 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:15 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 00:28:24 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"jane", "last_name"=>"doe", "birthdate(1i)"=>"1994", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"janedoe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = 'janedoe' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 31ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:28:25 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:28:25 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:28:25 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:28:25 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:28:25 -0500
+Served asset /users.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:25 -0500
+Served asset /jquery.js - 304 Not Modified (45ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:25 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:25 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:25 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:25 -0500
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:25 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 00:28:51 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"jane", "last_name"=>"", "birthdate(1i)"=>"1994", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"asdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = 'asdf' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 52ms (Views: 48.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:28:51 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:28:51 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:28:51 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:51 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:28:51 -0500
+Served asset /public.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:28:51 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:51 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:51 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:51 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:51 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:28:51 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/public/register" for 127.0.0.1 at 2013-11-20 00:32:26 -0500
+Processing by PublicController#register as HTML
+ERROR: compiling _app_views_public_register_html_erb__23379339_78282810 RAISED /home/tj/CSE3901_Project6/app/views/public/register.html.erb:17: syntax error, unexpected '<', expecting ')'
+<%= text_field(:user, :first_n...
+ ^
+/home/tj/CSE3901_Project6/app/views/public/register.html.erb:18: syntax error, unexpected '(', expecting ')'
+...me: ');@output_buffer.append= ( text_field(:user, :last_name...
+...                               ^
+Function body:           def _app_views_public_register_html_erb__23379339_78282810(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "public/register";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Register</h1>
+
+');@output_buffer.append=  form_tag("/users/register", method: 'post') do @output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+'); if @user.errors.any? 
+@output_buffer.safe_concat('  <div id="error_explanation">
+    <h2>');@output_buffer.append= ( pluralize(@user.errors.count, "error") );@output_buffer.safe_concat(' prohibited this event from being saved:</h2>
+    <ul>
+');     @user.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('      <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');     end 
+@output_buffer.safe_concat('    </ul>
+  </div>
+'); end 
+@output_buffer.safe_concat('
+');@output_buffer.append= ( label(:user, :first_name, 'First Name')
+<%= text_field(:user, :first_name, autocomplete: :off) );@output_buffer.safe_concat('<br />
+Last Name: ');@output_buffer.append= ( text_field(:user, :last_name, autocomplete: :off) );@output_buffer.safe_concat('<br />
+Birthdate: ');@output_buffer.append= ( date_select(:user, :birthdate, start_year: 1900) );@output_buffer.safe_concat('<br />
+Username: ');@output_buffer.append= ( text_field(:user, :username, autocomplete: :off) );@output_buffer.safe_concat('<br />
+Password: ');@output_buffer.append= ( password_field(:user, :password) );@output_buffer.safe_concat('<br />
+Retype Password: ');@output_buffer.append= ( password_field(:user, :password_confirmation) );@output_buffer.safe_concat('<br />
+');@output_buffer.append= ( submit_tag("Register") );@output_buffer.safe_concat('
+'); end 
+@output_buffer.safe_concat('
+');@output_buffer.append= ( link_to "Home", action: "index" );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_view/template.rb:285:in `module_eval'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_view/template.rb:285:in `compile'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_view/template.rb:233:in `compile!'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_view/template.rb:142:in `block in render'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/notifications.rb:125:in `instrument'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_view/template.rb:141:in `render'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_view/renderer/template_renderer.rb:41:in `block (2 levels) in render_template'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/notifications.rb:123:in `instrument'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_view/renderer/template_renderer.rb:40:in `block in render_template'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_view/renderer/template_renderer.rb:48:in `render_with_layout'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_view/renderer/template_renderer.rb:39:in `render_template'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_view/renderer/template_renderer.rb:12:in `render'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/abstract_controller/rendering.rb:109:in `_render_template'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/abstract_controller/rendering.rb:88:in `render'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/tj/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activerecord-3.2.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/abstract_controller/base.rb:167:in `process_action'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/callbacks.rb:414:in `_run__708462632__process_action__654787955__callbacks'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/notifications.rb:123:in `instrument'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activerecord-3.2.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/abstract_controller/base.rb:121:in `process'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/abstract_controller/rendering.rb:45:in `process'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal.rb:203:in `dispatch'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_controller/metal.rb:246:in `block in action'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/routing/route_set.rb:66:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/routing/route_set.rb:30:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/routing/route_set.rb:570:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activerecord-3.2.0/lib/active_record/query_cache.rb:64:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activerecord-3.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/callbacks.rb:405:in `_run__743038971__call__529673009__callbacks'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/railties-3.2.0/lib/rails/rack/logger.rb:26:in `call_app'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/railties-3.2.0/lib/rails/rack/logger.rb:16:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-3.2.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/railties-3.2.0/lib/rails/engine.rb:479:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/railties-3.2.0/lib/rails/application.rb:220:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/railties-3.2.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/tj/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/home/tj/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/home/tj/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/home/tj/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered public/register.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (/home/tj/CSE3901_Project6/app/views/public/register.html.erb:17: syntax error, unexpected '<', expecting ')'
+<%= text_field(:user, :first_n...
+ ^
+/home/tj/CSE3901_Project6/app/views/public/register.html.erb:18: syntax error, unexpected '(', expecting ')'
+...me: ');@output_buffer.append= ( text_field(:user, :last_name...
+...                               ^):
+    14: <% end %>
+    15: 
+    16: <%= label(:user, :first_name, 'First Name')
+    17: <%= text_field(:user, :first_name, autocomplete: :off) %><br />
+    18: Last Name: <%= text_field(:user, :last_name, autocomplete: :off) %><br />
+    19: Birthdate: <%= date_select(:user, :birthdate, start_year: 1900) %><br />
+    20: Username: <%= text_field(:user, :username, autocomplete: :off) %><br />
+  actionpack (3.2.0) lib/action_view/template.rb:285:in `module_eval'
+  actionpack (3.2.0) lib/action_view/template.rb:285:in `compile'
+  actionpack (3.2.0) lib/action_view/template.rb:233:in `compile!'
+  actionpack (3.2.0) lib/action_view/template.rb:142:in `block in render'
+  activesupport (3.2.0) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.0) lib/action_view/template.rb:141:in `render'
+  actionpack (3.2.0) lib/action_view/renderer/template_renderer.rb:41:in `block (2 levels) in render_template'
+  actionpack (3.2.0) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.0) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.0) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.0) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.0) lib/action_view/renderer/template_renderer.rb:40:in `block in render_template'
+  actionpack (3.2.0) lib/action_view/renderer/template_renderer.rb:48:in `render_with_layout'
+  actionpack (3.2.0) lib/action_view/renderer/template_renderer.rb:39:in `render_template'
+  actionpack (3.2.0) lib/action_view/renderer/template_renderer.rb:12:in `render'
+  actionpack (3.2.0) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.0) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.0) lib/abstract_controller/rendering.rb:109:in `_render_template'
+  actionpack (3.2.0) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.0) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.0) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.0) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.0) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.0) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.0) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/tj/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.0) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.0) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.0) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.0) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.0) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.0) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.0) lib/active_support/callbacks.rb:414:in `_run__708462632__process_action__654787955__callbacks'
+  activesupport (3.2.0) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.0) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.0) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.0) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.0) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.0) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.0) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.0) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.0) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.0) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.0) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.0) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.0) lib/action_dispatch/routing/route_set.rb:66:in `call'
+  actionpack (3.2.0) lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+  actionpack (3.2.0) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.0) lib/action_dispatch/routing/route_set.rb:570:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.0) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.0) lib/active_support/callbacks.rb:405:in `_run__743038971__call__529673009__callbacks'
+  activesupport (3.2.0) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.0) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.0) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.0) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.0) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.0) lib/rails/engine.rb:479:in `call'
+  railties (3.2.0) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.0) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/tj/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/tj/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/tj/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.9ms)
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/public/register" for 127.0.0.1 at 2013-11-20 00:32:50 -0500
+Processing by PublicController#register as HTML
+  Rendered public/register.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:32:51 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:32:51 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:32:51 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:32:51 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:32:51 -0500
+Served asset /jquery.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:32:51 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:32:51 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:32:51 -0500
+Served asset /events.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:32:51 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:32:51 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:32:51 -0500
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/public/register" for 127.0.0.1 at 2013-11-20 00:36:44 -0500
+Processing by PublicController#register as HTML
+  Rendered public/register.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 51ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:36:45 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:36:45 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:36:45 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:36:45 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:36:45 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:36:45 -0500
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:36:45 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:36:45 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:36:45 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:36:45 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:36:45 -0500
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 00:37:05 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"", "last_name"=>"", "birthdate(1i)"=>"1994", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 41ms (Views: 29.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:37:05 -0500
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:37:05 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:37:05 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:37:05 -0500
+Served asset /events.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:37:05 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:37:05 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:37:05 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:37:05 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:37:05 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:37:05 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:37:05 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 00:37:57 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"", "last_name"=>"", "birthdate(1i)"=>"1994", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (51.5ms)
+Completed 200 OK in 115ms (Views: 104.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:37:58 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:37:58 -0500
+Served asset /events.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:37:58 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:37:58 -0500
+Served asset /public.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:37:58 -0500
+Served asset /jquery.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:37:58 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:37:58 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:37:58 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:37:58 -0500
+Served asset /public.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:37:58 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:37:58 -0500
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 00:41:29 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"", "last_name"=>"", "birthdate(1i)"=>"1994", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 117ms (Views: 104.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:41:29 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:41:29 -0500
+Served asset /events.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:41:29 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:41:30 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:41:30 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:41:30 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:41:30 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:41:30 -0500
+Served asset /jquery.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:41:30 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:41:30 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:41:30 -0500
+Served asset /application.js - 304 Not Modified (72ms)
+
+
+Started GET "/public/register" for 127.0.0.1 at 2013-11-20 00:42:47 -0500
+Processing by PublicController#register as HTML
+  Rendered public/register.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 34ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:42:47 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:42:47 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:42:47 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:42:47 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:42:47 -0500
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:42:47 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:42:47 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:42:47 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:42:47 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:42:47 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:42:47 -0500
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/public/register" for 127.0.0.1 at 2013-11-20 00:43:23 -0500
+Processing by PublicController#register as HTML
+  Rendered public/register.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 64ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:43:23 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:43:24 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:43:24 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:43:24 -0500
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:43:24 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:43:24 -0500
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:43:24 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:43:24 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:43:24 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:43:24 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:43:24 -0500
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 00:44:08 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"", "last_name"=>"", "birthdate(1i)"=>"1994", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 48ms (Views: 27.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:44:08 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:44:08 -0500
+Served asset /public.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:44:08 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:44:08 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:44:08 -0500
+Served asset /jquery.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:44:08 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:44:08 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:44:08 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:44:08 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:44:08 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:44:08 -0500
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started GET "/public/register" for 127.0.0.1 at 2013-11-20 00:47:50 -0500
+Processing by PublicController#register as HTML
+  Rendered public/register.html.erb within layouts/application (40.3ms)
+Completed 200 OK in 66ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:47:50 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:47:50 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:47:50 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:47:50 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:47:50 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:47:50 -0500
+Served asset /jquery.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:47:50 -0500
+Served asset /events.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:47:51 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:47:51 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:47:51 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:47:51 -0500
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 00:47:57 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"", "last_name"=>"", "birthdate(1i)"=>"1994", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 62ms (Views: 48.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:47:57 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:47:57 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:47:57 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:47:57 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:47:57 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:47:57 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:47:57 -0500
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:47:58 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:47:58 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:47:58 -0500
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:47:58 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/public/register" for 127.0.0.1 at 2013-11-20 00:49:55 -0500
+Processing by PublicController#register as HTML
+  Rendered public/register.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 36ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:49:55 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:49:55 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:49:55 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:49:55 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:49:55 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:49:55 -0500
+Served asset /jquery.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:49:55 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:49:55 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:49:55 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:49:55 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:49:55 -0500
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 00:49:58 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"", "last_name"=>"", "birthdate(1i)"=>"1994", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 65ms (Views: 60.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:49:58 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:49:58 -0500
+Served asset /events.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:49:58 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:49:58 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:49:58 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:49:58 -0500
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:49:58 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:49:58 -0500
+Served asset /events.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:49:58 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:49:58 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:49:58 -0500
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2013-11-20 00:50:26 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (2.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 29ms (Views: 20.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:26 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:27 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:27 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:27 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:27 -0500
+Served asset /jquery.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:27 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:27 -0500
+Served asset /users.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:27 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:27 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:27 -0500
+Served asset /users.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:27 -0500
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2013-11-20 00:50:30 -0500
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (31.5ms)
+  Rendered events/new.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:30 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:30 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:30 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:30 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:30 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:30 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:30 -0500
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:30 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:30 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:30 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:30 -0500
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2013-11-20 00:50:31 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "event"=>{"location"=>"", "date(1i)"=>"2013", "date(2i)"=>"11", "date(3i)"=>"20", "date(4i)"=>"05", "date(5i)"=>"50"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered events/_form.html.erb (16.8ms)
+  Rendered events/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 50ms (Views: 46.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:32 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:32 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:32 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:32 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:32 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:32 -0500
+Served asset /jquery.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:32 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:32 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:32 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:32 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:32 -0500
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-20 00:50:38 -0500
+Processing by PublicController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" 
+  Rendered public/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:38 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:39 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:39 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:39 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:39 -0500
+Served asset /jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:39 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:39 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:39 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:39 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:39 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:39 -0500
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/public/register" for 127.0.0.1 at 2013-11-20 00:50:40 -0500
+Processing by PublicController#register as HTML
+  Rendered public/register.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:40 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:40 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:40 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:40 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:40 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:40 -0500
+Served asset /jquery.js - 304 Not Modified (72ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:40 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:40 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:40 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:40 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:40 -0500
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/public/register" for 127.0.0.1 at 2013-11-20 00:50:58 -0500
+Processing by PublicController#register as HTML
+  Rendered public/register.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 24ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:58 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:58 -0500
+Served asset /events.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:58 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:58 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:50:58 -0500
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:58 -0500
+Served asset /jquery.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:58 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:59 -0500
+Served asset /events.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:59 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:59 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:50:59 -0500
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 00:51:01 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"", "last_name"=>"", "birthdate(1i)"=>"2013", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (3.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 77ms (Views: 67.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:02 -0500
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:02 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:02 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:02 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:02 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:02 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:02 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:02 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:02 -0500
+Served asset /public.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:02 -0500
+Served asset /users.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:02 -0500
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/public/register" for 127.0.0.1 at 2013-11-20 00:51:08 -0500
+Processing by PublicController#register as HTML
+  Rendered public/register.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 36ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:09 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:09 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:09 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:09 -0500
+Served asset /jquery.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:09 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:09 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:09 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:09 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:09 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:09 -0500
+Served asset /users.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:09 -0500
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/public/register" for 127.0.0.1 at 2013-11-20 00:51:26 -0500
+Processing by PublicController#register as HTML
+  Rendered public/register.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 65ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:26 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:26 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:26 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:26 -0500
+Served asset /jquery.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:26 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:26 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:26 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:27 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:27 -0500
+Served asset /public.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:27 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:27 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 00:51:29 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"", "last_name"=>"", "birthdate(1i)"=>"2013", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 59ms (Views: 49.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:29 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:29 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:29 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:29 -0500
+Served asset /public.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:29 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:29 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:29 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:29 -0500
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:29 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:29 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:29 -0500
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 00:51:38 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"", "last_name"=>"", "birthdate(1i)"=>"2013", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 52ms (Views: 48.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:38 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:38 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:38 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:38 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 00:51:38 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:38 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (35ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:38 -0500
+Served asset /jquery.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:38 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:38 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:38 -0500
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 00:51:39 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:04:32 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"", "last_name"=>"", "birthdate(1i)"=>"2013", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = '' LIMIT 1[0m
+  [1m[35m (5.5ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 41ms (Views: 20.3ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:04:32 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:04:32 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:04:32 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:04:32 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:04:32 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:32 -0500
+Served asset /jquery.js - 304 Not Modified (39ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:32 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:32 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:32 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:32 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:32 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:04:45 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"", "last_name"=>"", "birthdate(1i)"=>"2013", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 60ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:04:45 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:04:45 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:04:46 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:04:46 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:46 -0500
+Served asset /jquery.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:04:46 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:46 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:46 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:46 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:46 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:46 -0500
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:04:56 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"", "last_name"=>"", "birthdate(1i)"=>"2013", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (68.4ms)
+Completed 200 OK in 98ms (Views: 88.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:04:56 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:04:56 -0500
+Served asset /public.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:04:56 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:04:56 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:56 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:04:56 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:56 -0500
+Served asset /jquery.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:56 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:56 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:56 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:04:56 -0500
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:05:15 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"", "last_name"=>"", "birthdate(1i)"=>"2013", "birthdate(2i)"=>"11", "birthdate(3i)"=>"20", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 99ms (Views: 83.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:05:15 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:05:15 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:05:15 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:05:15 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:05:15 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:05:15 -0500
+Served asset /jquery.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:05:15 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:05:15 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:05:15 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:05:15 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:05:15 -0500
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:10:21 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"bendover^", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = 'bendover^' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 91ms (Views: 59.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:10:21 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:10:21 -0500
+Served asset /public.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:10:21 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:10:21 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:10:21 -0500
+Served asset /jquery.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:10:21 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:10:21 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:10:21 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:10:21 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:10:21 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:10:21 -0500
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:10:41 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"_asdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = '_asdf' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 44ms (Views: 39.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:10:41 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:10:41 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:10:41 -0500
+Served asset /events.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:10:41 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:10:41 -0500
+Served asset /scaffolds.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:10:41 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:10:41 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:10:41 -0500
+Served asset /events.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:10:41 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:10:41 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:10:41 -0500
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:11:24 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"_asdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = '_asdf' LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 39ms (Views: 23.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:11:24 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:11:24 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:11:24 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:11:24 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:11:24 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:11:24 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:11:24 -0500
+Served asset /jquery.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:11:24 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:11:24 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:11:24 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:11:24 -0500
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:13:11 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"asdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = 'asdf' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 80ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:13:11 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:13:11 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:13:11 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:13:11 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:13:11 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:13:11 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:13:11 -0500
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:13:11 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:13:11 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:13:11 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:13:11 -0500
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:20:01 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"asdf_", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = 'asdf_' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 77ms (Views: 49.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:02 -0500
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:02 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:02 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:02 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:02 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:02 -0500
+Served asset /jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:02 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:02 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:02 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:02 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:02 -0500
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:20:09 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"asdf_asdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = 'asdf_asdf' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 95ms (Views: 74.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:09 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:10 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:10 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:10 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:10 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:10 -0500
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:10 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:10 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:10 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:10 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:10 -0500
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:20:18 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"asdfasd2323", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = 'asdfasd2323' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 32ms (Views: 21.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:18 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:18 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:18 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:18 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:18 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:18 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:18 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:18 -0500
+Served asset /public.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:18 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:18 -0500
+Served asset /users.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:18 -0500
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:20:31 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"asdfasdfasdfadsfasdfasdg;alskdjgadsg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = 'asdfasdfasdfadsfasdfasdg;alskdjgadsg' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (70.5ms)
+Completed 200 OK in 102ms (Views: 82.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:31 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:31 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:31 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:31 -0500
+Served asset /events.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:31 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:31 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:31 -0500
+Served asset /jquery.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:31 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:32 -0500
+Served asset /events.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:32 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:32 -0500
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:20:46 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"asdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = 'asdf' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (67.6ms)
+Completed 200 OK in 87ms (Views: 78.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:46 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:46 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:46 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:46 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:46 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:46 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:46 -0500
+Served asset /jquery.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:46 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:46 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:46 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:46 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:20:52 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"_asdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (5.8ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = '_asdf' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 64ms (Views: 51.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:52 -0500
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:52 -0500
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:52 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:52 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:52 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:52 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:52 -0500
+Served asset /jquery.js - 304 Not Modified (58ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:52 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:52 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:52 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:52 -0500
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:20:59 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"1asdfsdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = '1asdfsdf' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (70.6ms)
+Completed 200 OK in 97ms (Views: 85.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:59 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:59 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:59 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:59 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:20:59 -0500
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:59 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:59 -0500
+Served asset /jquery.js - 304 Not Modified (35ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:59 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:59 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:59 -0500
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:20:59 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:21:07 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"asdfadsf123_123", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (4.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = 'asdfadsf123_123' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 89ms (Views: 81.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:07 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:07 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:07 -0500
+Served asset /public.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:07 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:07 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:07 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:07 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:07 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:07 -0500
+Served asset /events.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:07 -0500
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:07 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:21:15 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"asdf___adsf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = 'asdf___adsf' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 51ms (Views: 47.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:15 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:15 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:16 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:16 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:16 -0500
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:16 -0500
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:16 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:16 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:16 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:16 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:16 -0500
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:21:23 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"asdf_q3easd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = 'asdf_q3easd' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (69.5ms)
+Completed 200 OK in 89ms (Views: 82.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:23 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:23 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:23 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:23 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:23 -0500
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:23 -0500
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:24 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:24 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:24 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:24 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:24 -0500
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:21:42 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"234234234", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (3.2ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = '234234234' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered public/register.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 43ms (Views: 37.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:42 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:42 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:42 -0500
+Served asset /public.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:42 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:42 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:42 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:42 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:42 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:42 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:42 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:42 -0500
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:21:56 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"\"true\"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."username" = '"true"' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered public/register.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 48ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:56 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:56 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:56 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:56 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:21:56 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:56 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:56 -0500
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:56 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:56 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:56 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:21:56 -0500
+Served asset /application.js - 304 Not Modified (21ms)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2013-11-20 01:26:59 -0500
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amBAkhkTT5oXiPLspTfUQpIE74sErvhH+UewAq3T8/w=", "user"=>{"first_name"=>"Ben", "last_name"=>"Dover", "birthdate(1i)"=>"1966", "birthdate(2i)"=>"1", "birthdate(3i)"=>"20", "username"=>"bendover", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."username" = 'bendover' LIMIT 1[0m
+  [1m[35mSQL (9.9ms)[0m  INSERT INTO "users" ("birthdate", "created_at", "first_name", "last_name", "password", "rank", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["birthdate", Thu, 20 Jan 1966], ["created_at", Wed, 20 Nov 2013 06:26:59 UTC +00:00], ["first_name", "Ben"], ["last_name", "Dover"], ["password", "abc123"], ["rank", false], ["updated_at", Wed, 20 Nov 2013 06:26:59 UTC +00:00], ["username", "bendover"]]
+  [1m[36m (487.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 513ms (ActiveRecord: 497.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-20 01:27:00 -0500
+Processing by PublicController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" 
+  Rendered public/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 50ms (Views: 32.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-20 01:27:00 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-20 01:27:00 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-20 01:27:00 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-20 01:27:00 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-20 01:27:00 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-20 01:27:00 -0500
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-20 01:27:00 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-20 01:27:00 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-20 01:27:00 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 01:27:00 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 01:27:00 -0500
+Served asset /application.js - 304 Not Modified (4ms)

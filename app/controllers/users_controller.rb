@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 		if @user.save
 			redirect_to controller: 'public', action: 'index'
 		else
-			redirect_to controller: 'public', action: 'register'
+			render 'public/register'
 		end
 	end
 
