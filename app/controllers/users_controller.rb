@@ -4,7 +4,12 @@ class UsersController < ApplicationController
 	end
 
 	def register
-		redirect_to controller: 'public', action: 'index'
+		@user = User.new(params[:user])
+		if @user.save
+			redirect_to controller: 'public', action: 'index'
+		else
+			redirect_to controller: 'public', action: 'register'
+		end
 	end
 
 	def login
