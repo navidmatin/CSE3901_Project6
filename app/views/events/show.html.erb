@@ -9,12 +9,12 @@
 
 <p>
   <b>Date:</b>
-  <%= @event.date %>
+  <%= @event.date.to_date %>
 </p>
 
 <p>
   <b>Time:</b>
-  <%= @event.time.to_s(:time) %>
+  <%= @event.date.to_s(:time) %>
 </p>
 
 <p>
