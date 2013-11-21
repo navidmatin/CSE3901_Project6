@@ -13,4 +13,13 @@ class User < ActiveRecord::Base
 	def birthdate_is_in_the_past
 		errors.add(:birthdate, ' must be in the past') unless (birthdate.past?)
 	end
+
+	def self.authenticate(username, login_password)
+		user = User.find_by_username(username)
+		if user && (login_password == user.password)
+			return user	
+		else
+			return false
+		end
+	end
 end

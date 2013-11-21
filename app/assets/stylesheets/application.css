@@ -46,7 +46,6 @@ tr.odd-row {
 td {
 	border-right: 2px solid #ccc;
 	padding: 10px;
-	font-size: 16px;
 	text-align: left;
 }
 
@@ -61,5 +60,5 @@ td.cell {
 
 td.cell-right {
 	font-size: 16px;
-	text-align: left;
+	text-align: right;
 }

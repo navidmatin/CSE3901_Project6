@@ -1,6 +1,6 @@
 <h1>Register</h1>
 
-<%= form_tag("/users/register", method: 'post') do %>
+<%= form_tag(action: 'register_process', method: 'post') do %>
 
 <% if @user.errors.any? %>
   <div id="error_explanation">
@@ -38,5 +38,3 @@
 </div>
 <%= submit_tag("Register") %>
 <% end %>
-
-<%= link_to "Home", action: "index" %>

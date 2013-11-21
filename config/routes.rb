@@ -1,11 +1,11 @@
 Project6::Application.routes.draw do
   resources :events
-  resources :users
-  get "public/login" => "public#login"
-  get "public/register" => "public#register"
-  get "users/show" => "users#show"
-  post "users/register" => "users#register"
-  post "users/login" => "users#login"
+  get "users/login" => "users#login"
+  get "users/register" => "users#register"
+  post "users/register_process" => "users#register_process"
+  post "users/login_process" => "users#login_process"
+  resources :users 
+  get "users/show/:id" => "users#show"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

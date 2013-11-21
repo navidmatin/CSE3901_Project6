@@ -1,0 +1,18 @@
+<h1>Login</h1>
+
+<%= form_tag(action: 'login_process', method: 'post') do %>
+<% if flash[:notice] %>
+    <div id="error_explanation">
+    	<%= notice %>
+	</div>
+<% end %>
+<div class="field">
+	<%= label(:user, :username, 'Username') %><br />
+	<%= text_field(:user, :username, autocomplete: :off) %>
+</div>
+<div class="field">
+	<%= label(:user, :password, 'Password') %><br />
+	<%= password_field(:user, :password) %>
+</div>
+<%= submit_tag("Login") %>
+<% end %>

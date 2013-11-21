@@ -17,9 +17,11 @@
   <%= @event.date.to_s(:time) %>
 </p>
 
-<p>
-	<h2>Participants in this event:</h2><br />
-	<table>
+<table>
+	<th colspan="3">Participants in this event</th>
+	<% if @event.users.empty? %>
+		<tr><td>No participants have signed up for this event yet.</td></tr>
+	<% else %>
 		<% @event.users.sort_by {|h| [h["last_name"],h["first_name"]]}.each do |user| %>
 		<tr class="<%= cycle('even-row', 'odd-row') %>">
 			<td class="cell"><%= link_to user.username, user %></td>
@@ -27,8 +29,8 @@
 			<td class="cell"><%= user.first_name %></td>
 		</tr>
 		<% end %>
-	</table>
-</p>
+	<% end %>
+</table>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
