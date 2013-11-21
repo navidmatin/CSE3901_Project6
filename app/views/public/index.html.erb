@@ -1,8 +1,9 @@
-<div id="header">
-	<h1>Charity Fundraiser</h1>
-	<%= link_to 'Login', controller: 'users', action: 'login' %> or <%= link_to 'Register', controller: 'users', action: 'register' %>
-</div>
-<div id="body">
+<h1>Charity Fundraiser</h1>
+<% if !@logged_in %>
+	<p><%= link_to 'Login', controller: 'users', action: 'login' %> or <%= link_to 'Register', controller: 'users', action: 'register' %></p>
+<% else %>
+	<p>Welcome, <%= @current_user.first_name %> (<%= link_to 'Logout', controller: 'users', action: 'logout' %>)</p>
+<% end %>
 <h2>Events</h2>
 <table>
   <tr>
@@ -20,4 +21,3 @@
   </tr>
 <% end %>
 </table>
-</div>

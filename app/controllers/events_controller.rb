@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+	before_filter :authenticate_user, only: [:index, :new, :edit, :create, :update, :destroy]
+	before_filter :get_current_user
   # GET /events
   # GET /events.json
   def index
@@ -80,4 +82,13 @@ class EventsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+	def sign_up
+		@event = Event.find(params[:event])
+		@user = User.find(params[:user])
+		unless @event.users.include?(@user)
+			@event.users << @user
+		end
+		redirect_to @event
+	end
 end

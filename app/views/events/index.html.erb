@@ -12,10 +12,9 @@
 
 <% @events.each do |event| %>
   <tr>
-    <td><%= event.location %></td>
+    <td><%= link_to event.location, event %></td>
     <td><%= event.date.to_date %></td>
     <td><%= event.date.to_s(:time) %></td>
-    <td><%= link_to 'Show', event %></td>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>
     <td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
@@ -24,4 +23,4 @@
 
 <br />
 
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'New Event', new_event_path %> | <%= link_to 'Home', controller: 'public', action: 'index' %>

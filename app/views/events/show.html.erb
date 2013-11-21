@@ -31,6 +31,9 @@
 		<% end %>
 	<% end %>
 </table>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Home', controller: 'public', action: 'index' %> |
+<%= link_to('Sign Up', action: 'sign_up', event: @event, user: @current_user) + " " %>
+<% if @logged_in && @current_user.rank == true %>
+	| <%= link_to 'Edit Event', edit_event_path(@event) %> |
+	<%= link_to 'Admin List', events_path %>
+<% end %>

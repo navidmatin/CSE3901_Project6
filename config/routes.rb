@@ -1,9 +1,11 @@
 Project6::Application.routes.draw do
+  match "events/sign_up" => "events#sign_up"
   resources :events
   get "users/login" => "users#login"
   get "users/register" => "users#register"
   post "users/register_process" => "users#register_process"
   post "users/login_process" => "users#login_process"
+  match "users/logout" => "users#logout"
   resources :users 
   get "users/show/:id" => "users#show"
   # The priority is based upon order of creation:

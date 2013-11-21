@@ -11,21 +11,6 @@
  *= require_self
  *= require_tree .
 */
-body {
-	margin: 0px;
-}
-
-div#header {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 50px;
-	background-color: #00cc99;
-}
-
-div#body {
-	margin-top: 70px;
-}
 
 table {
 	font-family: sans-serif;
