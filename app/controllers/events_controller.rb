@@ -84,11 +84,16 @@ class EventsController < ApplicationController
   end
 
 	def sign_up
-		@event = Event.find(params[:event])
-		@user = User.find(params[:user])
-		unless @event.users.include?(@user)
-			@event.users << @user
-		end
+		@event = Event.find(params[:event_id])
+		@user = User.find(params[:user_id])
+		@event.users << @user
+		redirect_to @event
+	end
+
+	def unenroll
+		@event = Event.find(params[:event_id])
+		@user = User.find(params[:user_id])
+		@event.users.delete(@user)
 		redirect_to @event
 	end
 end

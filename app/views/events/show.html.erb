@@ -17,6 +17,22 @@
   <%= @event.date.to_s(:time) %>
 </p>
 
+<% if @logged_in %>
+	<% if @event.users.include?(@current_user) %>
+		<%= form_tag(action: 'unenroll', method: 'post') do %>
+			<%= hidden_field_tag(:event_id, @event.id) %>
+			<%= hidden_field_tag(:user_id, @current_user.id) %>
+			<%= submit_tag('Unenroll') %>
+		<% end %>
+	<% else %>
+		<%= form_tag(action: 'sign_up', method: 'post') do %>
+			<%= hidden_field_tag(:event_id, @event.id) %>
+			<%= hidden_field_tag(:user_id, @current_user.id) %>
+			<%= submit_tag('Sign Up') %>
+		<% end %>
+	<% end %>
+<% end %>
+
 <table>
 	<th colspan="3">Participants in this event</th>
 	<% if @event.users.empty? %>
@@ -31,8 +47,7 @@
 		<% end %>
 	<% end %>
 </table>
-<%= link_to 'Home', controller: 'public', action: 'index' %> |
-<%= link_to('Sign Up', action: 'sign_up', event: @event, user: @current_user) + " " %>
+<%= link_to 'Home', controller: 'public', action: 'index' %>
 <% if @logged_in && @current_user.rank == true %>
 	| <%= link_to 'Edit Event', edit_event_path(@event) %> |
 	<%= link_to 'Admin List', events_path %>

@@ -1,5 +1,6 @@
 Project6::Application.routes.draw do
   match "events/sign_up" => "events#sign_up"
+  match "events/unenroll" => "events#unenroll"
   resources :events
   get "users/login" => "users#login"
   get "users/register" => "users#register"
