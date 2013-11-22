@@ -24,4 +24,14 @@ class ApplicationController < ActionController::Base
 			@current_user = User.find(session[:user_id])
 		end
 	end
+
+	def authenticate_admin
+		if session[:user_id]
+			unless User.find(session[:user_id]).rank == true
+				redirect_to(controller: 'public', action: 'index')
+			end
+		else
+			redirect_to(controller: 'users', action: 'login')
+		end
+	end
 end

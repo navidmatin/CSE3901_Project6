@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-	before_filter :authenticate_user, only: [:index, :new, :edit, :create, :update, :destroy]
+	before_filter :authenticate_admin, only: [:index, :new, :edit, :create, :update, :destroy]
 	before_filter :get_current_user
   # GET /events
   # GET /events.json
