@@ -39577,3 +39577,805 @@ Served asset /application.js - 304 Not Modified (7ms)
 
 Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-21 23:14:48 -0500
 Served asset /users.js - 304 Not Modified (9ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEvents (20131118075332)
+Migrating to CreateUsers (20131118084514)
+Migrating to CreateParticipations (20131118085806)
+Migrating to DropParticipationTable (20131118091911)
+Migrating to CreateAssembliesPartsJoinTable (20131118092218)
+Migrating to AddRankToUsers (20131118222932)
+Migrating to RemoveRankFromUsers (20131118223441)
+Migrating to AddRankBooleanToUsers (20131118223618)
+Migrating to RemoveTimeFromEvents (20131120020928)
+Migrating to ChangeDateFormatInEvents (20131120021149)
+Migrating to SetDefaultToRankUsers (20131120045115)
+Migrating to DropLocationFromEvents (20131122033559)
+Migrating to RemoveLocationFromEvents (20131122033706)
+Migrating to AddLocationColumnsToEvents (20131122033850)
+Migrating to CreateMessages (20131122043105)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "author" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("messages")[0m
+  [1m[35m (0.3ms)[0m  CREATE INDEX "index_messages_on_user_id" ON "messages" ("user_id")
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131122043105')[0m
+  [1m[35m (442.5ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("events")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("events_users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("messages")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_messages_on_user_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+
+
+Started GET "/events/2" for 127.0.0.1 at 2013-11-21 23:48:44 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 FROM "users" INNER JOIN "events_users" ON "users"."id" = "events_users"."user_id" WHERE "events_users"."event_id" = 2 AND "users"."id" = 8 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "events_users" ON "users"."id" = "events_users"."user_id" WHERE "events_users"."event_id" = 2[0m
+  Rendered events/show.html.erb within layouts/application (12.8ms)
+Compiled messages.css  (60ms)  (pid 2252)
+Compiled application.css  (71ms)  (pid 2252)
+Compiled messages.js  (889ms)  (pid 2252)
+Compiled application.js  (928ms)  (pid 2252)
+Completed 200 OK in 1202ms (Views: 1149.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-21 23:48:45 -0500
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-21 23:48:45 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2013-11-21 23:48:45 -0500
+Served asset /messages.css - 200 OK (11ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-21 23:48:45 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-21 23:48:45 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-21 23:48:45 -0500
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-21 23:48:45 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-21 23:48:45 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-21 23:48:45 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-21 23:48:45 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2013-11-21 23:48:45 -0500
+Served asset /messages.js - 200 OK (9ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-21 23:48:45 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-21 23:48:45 -0500
+Served asset /application.js - 304 Not Modified (155ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2013-11-21 23:48:49 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" INNER JOIN "events_users" ON "events"."id" = "events_users"."event_id" WHERE "events_users"."user_id" = 7
+  Rendered users/show.html.erb within layouts/application (60.7ms)
+Completed 500 Internal Server Error in 72ms
+
+ActionView::Template::Error (undefined method `comments' for #<User:0xa88d1a0>):
+    30: 	<p><%= f.submit "Send Message" %></p>
+    31: <% end %>
+    32: <div id="messages">
+    33: 	<%= render partial: @user.comments %>
+    34: </div>
+  app/views/users/show.html.erb:33:in `_app_views_users_show_html_erb___862877305_87652270'
+
+
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.2ms)
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2013-11-21 23:49:06 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "events_users" ON "events"."id" = "events_users"."event_id" WHERE "events_users"."user_id" = 7[0m
+  [1m[35mMessage Load (0.3ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 7
+  Rendered collection (0.0ms)
+  Rendered users/show.html.erb within layouts/application (71.2ms)
+Completed 200 OK in 92ms (Views: 83.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-21 23:49:06 -0500
+Served asset /application.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-21 23:49:06 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2013-11-21 23:49:06 -0500
+Served asset /messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-21 23:49:06 -0500
+Served asset /jquery.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-21 23:49:06 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-21 23:49:06 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-21 23:49:06 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-21 23:49:06 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-21 23:49:06 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-21 23:49:06 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2013-11-21 23:49:06 -0500
+Served asset /messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-21 23:49:06 -0500
+Served asset /users.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-21 23:49:06 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2013-11-21 23:49:42 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "events_users" ON "events"."id" = "events_users"."event_id" WHERE "events_users"."user_id" = 7[0m
+  [1m[35mMessage Load (0.3ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 7
+  Rendered collection (0.0ms)
+  Rendered users/show.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 66ms (Views: 61.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-21 23:49:42 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-21 23:49:42 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-21 23:49:42 -0500
+Served asset /public.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2013-11-21 23:49:42 -0500
+Served asset /messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-21 23:49:42 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-21 23:49:42 -0500
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-21 23:49:43 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-21 23:49:43 -0500
+Served asset /jquery.js - 304 Not Modified (62ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-21 23:49:43 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2013-11-21 23:49:43 -0500
+Served asset /messages.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-21 23:49:43 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-21 23:49:43 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-21 23:49:43 -0500
+Served asset /application.js - 304 Not Modified (23ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2013-11-21 23:50:36 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "events_users" ON "events"."id" = "events_users"."event_id" WHERE "events_users"."user_id" = 7[0m
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 7
+  Rendered collection (0.0ms)
+  Rendered users/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-21 23:50:36 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-21 23:50:36 -0500
+Served asset /events.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-21 23:50:36 -0500
+Served asset /public.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2013-11-21 23:50:36 -0500
+Served asset /messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-21 23:50:36 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-21 23:50:36 -0500
+Served asset /jquery.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-21 23:50:36 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-21 23:50:36 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-21 23:50:36 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2013-11-21 23:50:36 -0500
+Served asset /messages.js - 304 Not Modified (28ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-21 23:50:36 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-21 23:50:36 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-21 23:50:36 -0500
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started POST "/users/7/messages" for 127.0.0.1 at 2013-11-21 23:51:01 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mwCxOV1Mu1ucaCJp04m9pQ2j/B4igOaaO5eLiHg+8h8=", "message"=>{"author"=>"Tj's brother", "body"=>"This is the first test of the messaging system"}, "commit"=>"Send Message", "user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "messages" ("author", "body", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["author", "Tj's brother"], ["body", "This is the first test of the messaging system"], ["created_at", Fri, 22 Nov 2013 04:51:01 UTC +00:00], ["updated_at", Fri, 22 Nov 2013 04:51:01 UTC +00:00], ["user_id", 7]]
+  [1m[35m (582.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 653ms (ActiveRecord: 583.9ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2013-11-21 23:51:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "events_users" ON "events"."id" = "events_users"."event_id" WHERE "events_users"."user_id" = 7[0m
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 7
+  Rendered messages/_message.html.erb (2.4ms)
+  Rendered users/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-21 23:51:02 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-21 23:51:02 -0500
+Served asset /public.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2013-11-21 23:51:02 -0500
+Served asset /messages.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-21 23:51:02 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-21 23:51:02 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-21 23:51:02 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-21 23:51:02 -0500
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-21 23:51:02 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-21 23:51:02 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2013-11-21 23:51:02 -0500
+Served asset /messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-21 23:51:02 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-21 23:51:03 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-21 23:51:03 -0500
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2013-11-21 23:52:46 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (8.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mEvent Load (3.7ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "events_users" ON "events"."id" = "events_users"."event_id" WHERE "events_users"."user_id" = 7[0m
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 7
+  Rendered messages/_message.html.erb (6.2ms)
+  Rendered users/show.html.erb within layouts/application (15.2ms)
+Completed 500 Internal Server Error in 31ms
+
+ActionView::Template::Error (undefined method `uppercase' for "Tj's brother":String):
+    1: <%= div_for message do %>
+    2: 	<p>
+    3: 		<strong>Posted <%= time_ago_in_words(message.created_at) %> ago by <%= message.author.uppercase %></strong><br />
+    4: 		<%= message.body %>
+    5: 	</p>
+    6: <% end %>
+  app/views/messages/_message.html.erb:3:in `block in _app_views_messages__message_html_erb___151253216_82694230'
+  app/views/messages/_message.html.erb:1:in `_app_views_messages__message_html_erb___151253216_82694230'
+  app/views/users/show.html.erb:35:in `_app_views_users_show_html_erb___862877305_82808000'
+
+
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.1ms)
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2013-11-21 23:53:05 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "events_users" ON "events"."id" = "events_users"."event_id" WHERE "events_users"."user_id" = 7[0m
+  [1m[35mMessage Load (0.3ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 7
+  Rendered messages/_message.html.erb (5.6ms)
+  Rendered users/show.html.erb within layouts/application (27.3ms)
+Completed 500 Internal Server Error in 43ms
+
+ActionView::Template::Error (undefined method `upper' for "Tj's brother":String):
+    1: <%= div_for message do %>
+    2: 	<p>
+    3: 		<strong>Posted <%= time_ago_in_words(message.created_at) %> ago by <%= message.author.upper %></strong><br />
+    4: 		<%= message.body %>
+    5: 	</p>
+    6: <% end %>
+  app/views/messages/_message.html.erb:3:in `block in _app_views_messages__message_html_erb___151253216_82947150'
+  app/views/messages/_message.html.erb:1:in `_app_views_messages__message_html_erb___151253216_82947150'
+  app/views/users/show.html.erb:35:in `_app_views_users_show_html_erb___862877305_82808000'
+
+
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (13.5ms)
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.2ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2013-11-21 23:53:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "events_users" ON "events"."id" = "events_users"."event_id" WHERE "events_users"."user_id" = 7[0m
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 7
+  Rendered messages/_message.html.erb (11.3ms)
+  Rendered users/show.html.erb within layouts/application (29.1ms)
+Completed 500 Internal Server Error in 52ms
+
+ActionView::Template::Error (undefined method `to_upper' for "Tj's brother":String):
+    1: <%= div_for message do %>
+    2: 	<p>
+    3: 		<strong>Posted <%= time_ago_in_words(message.created_at) %> ago by <%= message.author.to_upper %></strong><br />
+    4: 		<%= message.body %>
+    5: 	</p>
+    6: <% end %>
+  app/views/messages/_message.html.erb:3:in `block in _app_views_messages__message_html_erb___151253216_87846040'
+  app/views/messages/_message.html.erb:1:in `_app_views_messages__message_html_erb___151253216_87846040'
+  app/views/users/show.html.erb:35:in `_app_views_users_show_html_erb___862877305_82808000'
+
+
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.0ms)
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/tj/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.7ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2013-11-21 23:53:57 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "events_users" ON "events"."id" = "events_users"."event_id" WHERE "events_users"."user_id" = 7[0m
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 7
+  Rendered messages/_message.html.erb (2.5ms)
+  Rendered users/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 41ms (Views: 28.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-21 23:53:57 -0500
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-21 23:53:57 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2013-11-21 23:53:57 -0500
+Served asset /messages.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-21 23:53:57 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-21 23:53:57 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-21 23:53:57 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-21 23:53:57 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-21 23:53:57 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-21 23:53:57 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2013-11-21 23:53:57 -0500
+Served asset /messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-21 23:53:57 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-21 23:53:57 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-21 23:53:57 -0500
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2013-11-21 23:54:25 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "events_users" ON "events"."id" = "events_users"."event_id" WHERE "events_users"."user_id" = 7[0m
+  [1m[35mMessage Load (2.7ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 7
+  Rendered messages/_message.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 38ms (Views: 27.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-21 23:54:25 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-21 23:54:25 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2013-11-21 23:54:26 -0500
+Served asset /messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-21 23:54:26 -0500
+Served asset /public.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-21 23:54:26 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-21 23:54:26 -0500
+Served asset /jquery.js - 304 Not Modified (34ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-21 23:54:26 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-21 23:54:26 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-21 23:54:26 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2013-11-21 23:54:26 -0500
+Served asset /messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-21 23:54:26 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-21 23:54:26 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-21 23:54:26 -0500
+Served asset /application.js - 304 Not Modified (24ms)
+
+
+Started POST "/users/7/messages" for 127.0.0.1 at 2013-11-21 23:59:25 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mwCxOV1Mu1ucaCJp04m9pQ2j/B4igOaaO5eLiHg+8h8=", "message"=>{"author"=>"John Doe", "body"=>"Second message on TJ's profile."}, "commit"=>"Send Message", "user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "messages" ("author", "body", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["author", "John Doe"], ["body", "Second message on TJ's profile."], ["created_at", Fri, 22 Nov 2013 04:59:25 UTC +00:00], ["updated_at", Fri, 22 Nov 2013 04:59:25 UTC +00:00], ["user_id", 7]]
+  [1m[35m (724.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 733ms (ActiveRecord: 726.1ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2013-11-21 23:59:26 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "events_users" ON "events"."id" = "events_users"."event_id" WHERE "events_users"."user_id" = 7[0m
+  [1m[35mMessage Load (0.3ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 7
+  Rendered messages/_message.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 21ms (Views: 15.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-21 23:59:26 -0500
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-21 23:59:26 -0500
+Served asset /public.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2013-11-21 23:59:26 -0500
+Served asset /messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-21 23:59:26 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-21 23:59:26 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-21 23:59:26 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-21 23:59:26 -0500
+Served asset /jquery.js - 304 Not Modified (52ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-21 23:59:26 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-21 23:59:26 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2013-11-21 23:59:26 -0500
+Served asset /messages.js - 304 Not Modified (47ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-21 23:59:26 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-21 23:59:26 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-21 23:59:26 -0500
+Served asset /application.js - 304 Not Modified (25ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2013-11-22 00:00:24 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "events_users" ON "events"."id" = "events_users"."event_id" WHERE "events_users"."user_id" = 7[0m
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 7
+  Rendered messages/_message.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 51ms (Views: 44.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 00:00:24 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-22 00:00:24 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2013-11-22 00:00:24 -0500
+Served asset /messages.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-22 00:00:24 -0500
+Served asset /public.css - 304 Not Modified (30ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-22 00:00:24 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-22 00:00:24 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 00:00:24 -0500
+Served asset /jquery.js - 304 Not Modified (33ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 00:00:24 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-22 00:00:24 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2013-11-22 00:00:24 -0500
+Served asset /messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-22 00:00:24 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-22 00:00:24 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 00:00:24 -0500
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2013-11-22 00:03:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "events_users" ON "events"."id" = "events_users"."event_id" WHERE "events_users"."user_id" = 7[0m
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 7
+  Rendered messages/_message.html.erb (6.6ms)
+  Rendered users/show.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 94ms (Views: 91.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 00:03:41 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-11-22 00:03:41 -0500
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2013-11-22 00:03:41 -0500
+Served asset /messages.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-22 00:03:41 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2013-11-22 00:03:41 -0500
+Served asset /public.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 00:03:41 -0500
+Served asset /jquery.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-22 00:03:41 -0500
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 00:03:41 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-11-22 00:03:41 -0500
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2013-11-22 00:03:41 -0500
+Served asset /messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2013-11-22 00:03:41 -0500
+Served asset /public.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-22 00:03:42 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 00:03:42 -0500
+Served asset /application.js - 304 Not Modified (15ms)

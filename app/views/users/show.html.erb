@@ -12,9 +12,25 @@
 	<% @user.events.sort_by {|h| [h["date"],h["time"]]}.each do |event| %>
 	<tr>
 		<% location = event.address + ", " + event.city + ", " + event.state %>
-		<td><%= link_to location, controller: "events", action: "show", id: event.id %></td>
-		<td><%= event.date.to_date %></td>
-		<td><%= event.date.to_s(:time) %></td>
+		<td class="cell"><%= link_to location, controller: "events", action: "show", id: event.id %></td>
+		<td class="cell"><%= event.date.to_date %></td>
+		<td class="cell"><%= event.date.to_s(:time) %></td>
 	</tr>
 	<% end %>
 </table>
+
+<h2>Messages</h2>
+<%= form_for [@user, Message.new] do |f| %>
+	<div class="field">
+		<%= f.label :author, "Author" %><br />
+		<%= f.text_field :author %>
+	</div>
+	<div class="field">	
+		<%= f.label :body, "New Message" %><br />
+		<%= f.text_area :body %>
+	</div>
+	<p><%= f.submit "Send Message" %></p>
+<% end %>
+<div id="messages">
+	<%= render partial: @user.messages.reverse %>
+</div>

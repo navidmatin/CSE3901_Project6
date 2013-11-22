@@ -7,7 +7,9 @@ Project6::Application.routes.draw do
   post "users/register_process" => "users#register_process"
   post "users/login_process" => "users#login_process"
   match "users/logout" => "users#logout"
-  resources :users 
+  resources :users do
+	resources :messages, only: [:create]
+  end 
   get "users/show/:id" => "users#show"
   # The priority is based upon order of creation:
   # first created -> highest priority.

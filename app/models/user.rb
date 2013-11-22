@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 	has_and_belongs_to_many :events
+	has_many :messages
 	validates :first_name, presence: true
 	validates :last_name, presence: true
 	validate :birthdate_is_in_the_past
