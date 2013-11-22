@@ -1,6 +1,8 @@
 class Event < ActiveRecord::Base
 	has_and_belongs_to_many :users
-	validates :location, presence: true
+	validates :address, presence: true
+	validates :city, presence: true
+	validates :state, presence: true
 	validate :event_date_is_in_future
 
 	def event_date_is_in_future

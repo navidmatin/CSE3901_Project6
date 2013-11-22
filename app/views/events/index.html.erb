@@ -12,7 +12,8 @@
 
 <% @events.each do |event| %>
   <tr>
-    <td><%= link_to event.location, event %></td>
+	<% location = event.address + ", " + event.city + ", " + event.state %>
+    <td><%= link_to location, event %></td>
     <td><%= event.date.to_date %></td>
     <td><%= event.date.to_s(:time) %></td>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>

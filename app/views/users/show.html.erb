@@ -11,7 +11,8 @@
 	</tr>
 	<% @user.events.sort_by {|h| [h["date"],h["time"]]}.each do |event| %>
 	<tr>
-		<td><%= link_to event.location, controller: "events", action: "show", id: event.id %></td>
+		<% location = event.address + ", " + event.city + ", " + event.state %>
+		<td><%= link_to location, controller: "events", action: "show", id: event.id %></td>
 		<td><%= event.date.to_date %></td>
 		<td><%= event.date.to_s(:time) %></td>
 	</tr>

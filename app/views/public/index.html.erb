@@ -14,7 +14,8 @@
   </tr>
 <% @events.each do |event| %>
   <tr class="<%= cycle('even-row','odd-row') %>">
-	<td><%= link_to event.location, controller: 'events', action: 'show', id: event.id %></td>
+	<% location = event.address + ", " + event.city + ", " + event.state %>
+	<td><%= link_to location, controller: 'events', action: 'show', id: event.id %></td>
 	<td class="cell"><%= event.date.to_date %></td>
 	<td class="cell"><%= event.date.to_s(:time) %></td>
 	<td class="cell-right"><%= event.users.count %></td>
