@@ -1,14 +1,80 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Project6</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- <%= stylesheet_link_tag    "application", :media => "all" %>-->
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-</head>
-<body>
+    <title>Project6</title>
 
-<%= yield %>
+    <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="Content/sidr/stylesheets/jquery.sidr.dark.css">
+      
+      
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="Content/bootstrap/assets/js/html5shiv.js"></script>
+      <script src="Content/bootstrap/assets/js/respond.min.js"></script>
+    <![endif]-->
 
-</body>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+     <style>
+         #mobile-header {
+             display: none;
+         }
+         @media only screen and (max-width: 767px) {
+             #mobile-header {
+                 display:block;
+             }
+         }
+     </style>
+  </head>
+
+  <body>
+
+
+    
+ <div class="container">
+ 	<%= yield %>
+ 	</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <!-- Include the Sidr JS -->
+    <script src="Content/sidr/jquery.sidr.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+      <script>
+          //Sidr
+          ga('create', 'UA-45854159-1', 'ohio-state.edu');
+          ga('send', 'pageview');
+          $('#responsive-menu-button').sidr({
+              name: 'sidr-main',
+              source: '#navigation'
+          });
+          //Desktop
+          $(window).resize(function () { $.sidr('close', 'sidr-main'); });
+          $("#body").click(function(){
+               $.sidr('close', 'sidr-main');
+          });
+
+          //Mobile
+          $(window).touchwipe({
+              wipeLeft: function () {
+                  // Close
+                  $.sidr('close', 'sidr-main');
+              },
+              wipeRight: function () {
+                  // Open
+                  $.sidr('open', 'sidr-main');
+              },
+              preventDefaultEvents: false
+          });
+</script>
+  </body>
 </html>
