@@ -1,0 +1,6 @@
+<%= div_for message do %>
+	<p>
+		<strong>Posted <%= time_ago_in_words(message.created_at) %> ago by <%= message.author.upcase %></strong><br />
+		<%= message.body %>
+	</p>
+<% end %>
