@@ -1,6 +1,8 @@
 <%= div_for message do %>
-	<p>
-		<strong>Posted <%= time_ago_in_words(message.created_at) %> ago by <%= message.author.upcase %></strong><br />
+	<div class="panel panel-success">
+		<div class="panel-heading">
+		<p class="panel-title"><strong>Posted <%= time_ago_in_words(message.created_at) %> ago by <%= message.author.upcase %></strong></p></div>
+		<div class="panel-body">
 		<%= message.body %>
-	</p>
+		</div>
 <% end %>

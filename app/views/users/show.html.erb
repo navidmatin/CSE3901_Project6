@@ -1,50 +1,66 @@
-<h1><%= @user.first_name %> <%= @user.last_name %></h1>
-<h3><%= @user.username %></h3>
-<p><%= @user.birthdate %></p>
+<div class="well">
 
-<h2><%= @user.first_name %>'s Events:</h2>
-<table>
-	<tr>
-		<th>Location</th>
-		<th>Date</th>
-		<th>Time</th>
-	</tr>
-	<% if @user.events.empty? %>
-		<tr><td colspan="3">This user has not signed up for any events yet.</td></tr>
-	<% else %>
-		<% @user.events.sort_by {|h| [h["date"],h["time"]]}.each do |event| %>
-		<tr>
-			<% location = event.address + ", " + event.city + ", " + event.state %>
-			<td class="cell"><%= link_to location, controller: "events", action: "show", id: event.id %></td>
-			<td class="cell"><%= event.date.to_date %></td>
-			<td class="cell"><%= event.date.to_s(:time) %></td>
-			<% if @logged_in && (@current_user.id == @user.id) %>
-				<td>
-					<%= form_tag({controller: 'events', action: 'unenroll'}, method: 'post') do %>
-					<%= hidden_field_tag(:event_id, event.id) %>
-					<%= hidden_field_tag(:user_id, @current_user.id) %>
-					<%= submit_tag('Unenroll') %>
+		<h1 ><%= @user.first_name %> <%= @user.last_name %></h1>
+		
+		<h3 class="text-muted"><%= @user.username %></h3>
+		<p class="text-muted"><%= @user.birthdate %></p>
+	
+	<div class="panel panel-success">
+		<div class="panel-heading">
+		<h2 class="panel-title"><%= @user.first_name %>'s Events:</h2></div>
+		<div class="panel-body">
+		<table>
+			<tr>
+				<th>Location</th>
+				<th>Date</th>
+				<th>Time</th>
+			</tr>
+			<% if @user.events.empty? %>
+				<tr><td colspan="3">This user has not signed up for any events yet.</td></tr>
+			<% else %>
+				<% @user.events.sort_by {|h| [h["date"],h["time"]]}.each do |event| %>
+				<tr>
+					<% location = event.address + ", " + event.city + ", " + event.state %>
+					<td class="cell"><%= link_to location, controller: "events", action: "show", id: event.id %></td>
+					<td class="cell"><%= event.date.to_date %></td>
+					<td class="cell"><%= event.date.to_s(:time) %></td>
+					<% if @logged_in && (@current_user.id == @user.id) %>
+						<td>
+							<%= form_tag({controller: 'events', action: 'unenroll'}, method: 'post') do %>
+							<%= hidden_field_tag(:event_id, event.id) %>
+							<%= hidden_field_tag(:user_id, @current_user.id) %>
+							<%= submit_tag('Unenroll') %>
+							<% end %>
+						</td>
 					<% end %>
-				</td>
+				</tr>
+				<% end %>
 			<% end %>
-		</tr>
-		<% end %>
+		</table>
+		</div>
+	</div>
+	<div class="panel panel-info">
+		<div class="panel-heading">
+	<h2 class="panel-title">Messages</h2></div>
+	<div class="panel-body">
+	<%= form_for [@user, Message.new] do |f| %>
+		<div class="notice"><%= notice %></div> 
+		<div class="input-group">
+			<%= f.label :author, "Author" %><br />
+			<%= f.text_field :author, :class=>"form-control" %>
+		</div>
+		<div class="input-group">	
+			<%= f.label :body, "New Message" %><br />
+			<%= f.text_area :body, :class=>"form-control", :rows=>"4" %>
+		</div>
+		<hr>
+		<%= submit_tag("Send Message", :class=>"btn btn-primary")%>
 	<% end %>
-</table>
-
-<h2>Messages</h2>
-<%= form_for [@user, Message.new] do |f| %>
-	<div class="notice"><%= notice %></div> 
-	<div class="field">
-		<%= f.label :author, "Author" %><br />
-		<%= f.text_field :author %>
-	</div>
-	<div class="field">	
-		<%= f.label :body, "New Message" %><br />
-		<%= f.text_area :body %>
-	</div>
-	<p><%= f.submit "Send Message" %></p>
-<% end %>
-<div id="messages">
-	<%= render partial: @user.messages.reverse %>
+	</div></div>
+	<%if @user.messages.empty? %>
+	<% else %>
+		<div id="messages">
+			<%= render partial: @user.messages.reverse %>
+		</div>
+	<% end %>
 </div>
