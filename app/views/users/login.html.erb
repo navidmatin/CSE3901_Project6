@@ -1,4 +1,4 @@
-
+<div class="well">
 <%= form_tag(action: 'login_process', method: 'post') do %>
 <% if flash[:notice] %>
     <div id="error_explanation" class="alert alert-warning fade in">
@@ -33,6 +33,7 @@
 		<input id="checkbox" type="checkbox" value="remember-me">Remember me </label></br>
 <%= submit_tag("Login", :class=>"btn btn-lg btn-primary") %></div>
 <div class="col-sm-4"></div>
+</div>
 </div>
 <script>
 //Script for remember me check box

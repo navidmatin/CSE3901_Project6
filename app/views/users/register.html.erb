@@ -1,10 +1,13 @@
+
+<div class="well">
 <h1>Register</h1>
 
 <%= form_tag(action: 'register_process', method: 'post') do %>
 
 <% if @user.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this event from being saved:</h2>
+  <div id="error_explanation" class="alert alert-warning fade in">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+    <strong><%= pluralize(@user.errors.count, "error") %> prohibited this event from being saved:</strong>
     <ul>
     <% @user.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
@@ -12,29 +15,32 @@
     </ul>
   </div>
 <% end %>
-<div class="field">
+<form role="form">
+<div class="form-group form-inline">
 	<%= label(:user, :first_name, 'First Name') %><br />
-	<%= text_field(:user, :first_name, autocomplete: :off) %>
+	<%= text_field(:user, :first_name, autocomplete: :off, :class=>"form-control") %>
 </div>
-<div class="field">
+<div class="form-group">
 	<%= label(:user, :last_name, 'Last Name') %><br />
-	<%= text_field(:user, :last_name, autocomplete: :off) %>
+	<%= text_field(:user, :last_name, autocomplete: :off,:class=>"form-control") %>
 </div>
-<div class="field">
+<div class="form-group">
 	<%= label(:user, :birthdate, 'Birthdate') %><br />
-	<%= date_select(:user, :birthdate, start_year: DateTime.now.year - 100, end_year: DateTime.now.year) %>
+	<%= date_select(:user, :birthdate, start_year: DateTime.now.year - 100, end_year: DateTime.now.year, :class=>"form-control") %>
 </div>
-<div class="field">
+<div class="form-group">
 	<%= label(:user, :username, 'Username') %><br />
-	<%= text_field(:user, :username, autocomplete: :off) %>
+	<%= text_field(:user, :username, autocomplete: :off, :class=>"form-control") %>
 </div>
-<div class="field">
+<div class="form-group">
 	<%= label(:user, :password, 'Password') %><br />
-	<%= password_field(:user, :password) %>
+	<%= password_field(:user, :password, :class=>"form-control") %>
 </div>
-<div class="field">
+<div class="form-group">
 	<%= label(:user, :password_confirmation, 'Re-Enter Password') %><br />
-	<%= password_field(:user, :password_confirmation) %>
+	<%= password_field(:user, :password_confirmation, :class=>"form-control") %>
 </div>
-<%= submit_tag("Register") %>
+<%= submit_tag("Register",:class=>"btn btn-primary") %>
+</form>
+</div>
 <% end %>
