@@ -9,13 +9,26 @@
 		<th>Date</th>
 		<th>Time</th>
 	</tr>
-	<% @user.events.sort_by {|h| [h["date"],h["time"]]}.each do |event| %>
-	<tr>
-		<% location = event.address + ", " + event.city + ", " + event.state %>
-		<td class="cell"><%= link_to location, controller: "events", action: "show", id: event.id %></td>
-		<td class="cell"><%= event.date.to_date %></td>
-		<td class="cell"><%= event.date.to_s(:time) %></td>
-	</tr>
+	<% if @user.events.empty? %>
+		<tr><td colspan="3">This user has not signed up for any events yet.</td></tr>
+	<% else %>
+		<% @user.events.sort_by {|h| [h["date"],h["time"]]}.each do |event| %>
+		<tr>
+			<% location = event.address + ", " + event.city + ", " + event.state %>
+			<td class="cell"><%= link_to location, controller: "events", action: "show", id: event.id %></td>
+			<td class="cell"><%= event.date.to_date %></td>
+			<td class="cell"><%= event.date.to_s(:time) %></td>
+			<% if @logged_in && (@current_user.id == @user.id) %>
+				<td>
+					<%= form_tag({controller: 'events', action: 'unenroll'}, method: 'post') do %>
+					<%= hidden_field_tag(:event_id, event.id) %>
+					<%= hidden_field_tag(:user_id, @current_user.id) %>
+					<%= submit_tag('Unenroll') %>
+					<% end %>
+				</td>
+			<% end %>
+		</tr>
+		<% end %>
 	<% end %>
 </table>
 

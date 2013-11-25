@@ -5,6 +5,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+    @admins = User.find_all_by_rank(true)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -94,6 +95,6 @@ class EventsController < ApplicationController
 		@event = Event.find(params[:event_id])
 		@user = User.find(params[:user_id])
 		@event.users.delete(@user)
-		redirect_to @event
+		redirect_to :back
 	end
 end

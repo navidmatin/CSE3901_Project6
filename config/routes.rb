@@ -11,6 +11,8 @@ Project6::Application.routes.draw do
 	resources :messages, only: [:create]
   end 
   get "users/show/:id" => "users#show"
+  post "users/new_admin" => "users#new_admin"
+  post "users/remove_admin" => "users#remove_admin"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,5 +1,6 @@
-<h1>Events Administration</h1>
+<h1>Administrator Options</h1>
 
+<h3>Events</h3>
 <table>
   <tr>
     <th>Location</th>
@@ -21,7 +22,27 @@
   </tr>
 <% end %>
 </table>
-
 <br />
-
 <%= link_to 'New Event', new_event_path %> | <%= link_to 'Home', controller: 'public', action: 'index' %>
+
+<h3>Administrators</h3>
+<table>
+  <% @admins.each do |admin| %>
+    <tr>
+      <td><%= admin.first_name + " " + admin.last_name %> (<%= link_to admin.username, admin %>)</td>
+      <td>
+        <% unless admin.id == @current_user.id %>
+          <%= form_tag({controller: 'users', action: 'remove_admin'}, method: 'post') do %>
+            <%= hidden_field_tag(:user_id, admin.id) %>
+            <%= submit_tag('Remove') %>
+          <% end %>
+        <% end %>
+      </td>
+    </tr>
+   <% end %>
+</table>
+<p class="notice"><%= notice %></p>
+<%= form_tag({controller: 'users', action: 'new_admin'}, method: 'post') do %>
+  <%= text_field(:user, :username, autocomplete: 'off', placeholder: 'Enter username') %>
+  <%= submit_tag('Add as administrator') %>
+<% end %>

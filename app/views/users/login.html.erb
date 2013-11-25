@@ -15,15 +15,13 @@
 <div class="row">
 <div class="col-sm-4"></div>
 <div class="col-sm-4">
-	<%= label(:user, :username, 'Username', :class=>"form-signin") %>
-	<%= text_field(:user, :username, autocomplete: :off, :class=>"form-control") %>
+	<%= text_field(:user, :username, autocomplete: :off, :class=>"form-control", placeholder: 'Username') %><br />
 </div><div class="col-sm-4"></div>
 </div>
 <div class="row">
 	<div class="col-sm-4"></div>
 	<div class="col-sm-4">
-	<%= label(:user, :password, 'Password', :class=>"form-signin") %>
-	<%= password_field(:user, :password, :class=>"form-control") %><br />
+	<%= password_field(:user, :password, :class=>"form-control", placeholder: 'Password') %><br />
 	</div>
 	<div class="col-sm-4"></div>
 </div>

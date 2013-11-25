@@ -43,4 +43,22 @@ class UsersController < ApplicationController
 		session[:user_id] = nil
 		redirect_to controller: 'public', action: 'index'
 	end
+
+	def new_admin
+		@username = User.find_by_username(params[:user][:username])
+		if @username
+			@username.rank = true
+			@username.save
+		else
+			flash[:notice] = 'Username does not exist'
+		end
+		redirect_to controller: 'events', action: 'index'
+	end
+
+	def remove_admin
+		@username = User.find(params[:user_id])
+		@username.rank = false
+		@username.save
+		redirect_to controller: 'events', action: 'index'
+	end
 end
