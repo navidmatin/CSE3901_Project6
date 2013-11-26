@@ -40,12 +40,25 @@
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <% if @logged_in %>
-             <p class="navbar-text navbar-right">Welcome, <%= @current_user.first_name %> (<%= link_to 'Logout', controller: 'users', action: 'logout' %>) | <%= link_to 'My Profile', @current_user %></p>
-          <% else %>
-              <p class="navbar-text navbar-right"><%= link_to 'Login', controller: 'users', action: 'login' %> or <%= link_to 'Register', controller: 'users', action: 'register' %></p>
+          <ul class="nav navbar-nav navbar-right">
+          <% if @logged_in %><!-- logged in -->
+            <li class="navbar-text">Welcome, <%= @current_user.first_name %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-align-justify"></span></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to 'My Profile', @current_user %></li>
+                <% if @current_user.rank == true %><!-- logged in as admin -->
+                  <li><%= link_to 'Admin Center', {controller: 'events', action: 'index'} %></li>
+                <% end %>
+                <li class="divider"></li>
+                <li><%= link_to 'Logout', controller: 'users', action: 'logout' %></li>
+              </ul>
+            </li>
+          <% else %><!-- not signed in -->
+            <li><%= link_to 'Login', controller: 'users', action: 'login' %></li>
+            <li><%= link_to 'Register', controller: 'users', action: 'register' %></li>
           <% end %>
-          </div>
+          </ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </div><!-- /.navbar -->
