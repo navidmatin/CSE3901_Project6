@@ -17,14 +17,16 @@
       <td class="col-sm-3"><%= link_to location, event %></td>
       <td class="col-sm-3"><%= event.date.to_date %></td>
       <td class="col-sm-2"><%= event.date.to_s(:time) %></td>
-      <td class="col-sm-2"> <%= button_to 'Edit', edit_event_path(event), :class=>"btn btn-default btn-sm"%></td>
+      <td class="col-sm-2"> <%= link_to 'Edit', edit_event_path(event), :class=>"btn btn-default btn-sm"%></td>
       <td class="col-sm-2"><%= button_to 'Destroy', event, confirm: 'Are you sure?', method: :delete , :class=>"btn btn-default btn-sm"%></td>
     </tr>
   <% end %>
   </table>
+  <hr>
+    <%= link_to 'New Event', new_event_path, :class=>"btn btn-success btn-large" %> 
   </div></div>
   <br />
-  <%= link_to 'New Event', new_event_path %> | <%= link_to 'Home', controller: 'public', action: 'index' %>
+
 
   <h3>Administrators</h3>
   <table>
@@ -32,19 +34,24 @@
       <tr>
         <td><%= admin.first_name + " " + admin.last_name %> (<%= link_to admin.username, admin %>)</td>
         <td>
+
           <% unless admin.id == @current_user.id %>
             <%= form_tag({controller: 'users', action: 'remove_admin'}, method: 'post') do %>
               <%= hidden_field_tag(:user_id, admin.id) %>
-              <%= submit_tag('Remove') %>
+              <%= submit_tag('Remove', :class=>"btn btn-danger btn-sm") %>
             <% end %>
           <% end %>
         </td>
       </tr>
      <% end %>
   </table>
+  
   <p class="notice"><%= notice %></p>
+  <div class="form-inline" role="form">
+  <div class="form-group">
   <%= form_tag({controller: 'users', action: 'new_admin'}, method: 'post') do %>
-    <%= text_field(:user, :username, autocomplete: 'off', placeholder: 'Enter username') %>
-    <%= submit_tag('Add as administrator') %>
+    <%= text_field(:user, :username, autocomplete: 'off', placeholder: 'Enter username', :class=>"form-control") %></div>
+    <div class="form-group">
+    <%= submit_tag('Add as administrator',:class=>"btn btn-success btn-sm") %></div>
   <% end %>
 </div>
