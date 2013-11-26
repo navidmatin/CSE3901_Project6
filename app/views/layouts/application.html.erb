@@ -40,6 +40,12 @@
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+          <% if @logged_in %>
+             <p class="navbar-text navbar-right">Welcome, <%= @current_user.first_name %> (<%= link_to 'Logout', controller: 'users', action: 'logout' %>) | <%= link_to 'My Profile', @current_user %></p>
+          <% else %>
+              <p class="navbar-text navbar-right"><%= link_to 'Login', controller: 'users', action: 'login' %> or <%= link_to 'Register', controller: 'users', action: 'register' %></p>
+          <% end %>
+          </div>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </div><!-- /.navbar -->
