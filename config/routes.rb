@@ -1,4 +1,5 @@
 Project6::Application.routes.draw do
+
   match "events/sign_up" => "events#sign_up"
   match "events/unenroll" => "events#unenroll"
   resources :events
@@ -8,7 +9,8 @@ Project6::Application.routes.draw do
   post "users/login_process" => "users#login_process"
   match "users/logout" => "users#logout"
   resources :users do
-	resources :messages, only: [:create]
+	 resources :messages, only: [:create]
+   resources :pledges, only: [:create]
   end 
   get "users/show/:id" => "users#show"
   post "users/new_admin" => "users#new_admin"

@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	has_and_belongs_to_many :events
 	has_many :messages
+	has_many :pledges
 	validates :first_name, presence: true
 	validates :last_name, presence: true
 	validate :birthdate_is_in_the_past
@@ -22,5 +23,9 @@ class User < ActiveRecord::Base
 		else
 			return false
 		end
+	end
+
+	def total_pledge
+		pledges.to_a.sum {|pledge| pledge.amount}
 	end
 end

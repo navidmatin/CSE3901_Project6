@@ -18,6 +18,11 @@
   <%= @event.date.to_s(:time) %>
 </p>
 
+<p>
+	<b>Total Pledges:</b>
+	<%= number_to_currency(@event.total_pledge) %>
+</p>
+
 <% if @logged_in %>
 	<% if @event.users.include?(@current_user) %>
 		<%= form_tag(action: 'unenroll', method: 'post') do %>

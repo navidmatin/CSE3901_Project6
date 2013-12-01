@@ -50,7 +50,7 @@
 		<div class="notice"><%= notice %></div> 
 		<div class="input-group">
 			<%= f.label :author, "Author" %><br />
-			<%= f.text_field :author, :class=>"form-control" %>
+			<%= f.text_field :author, :class=>"form-control", autocomplete: "off" %>
 		</div>
 		<div class="input-group">	
 			<%= f.label :body, "New Message" %><br />
@@ -59,11 +59,45 @@
 		<hr>
 		<%= submit_tag("Send Message", :class=>"btn btn-primary")%>
 	<% end %>
-	</div></div>
-	<%if @user.messages.empty? %>
+	<br />
+	<% if @user.messages.empty? %>
 	<% else %>
 		<div id="messages">
 			<%= render partial: @user.messages.reverse %>
 		</div>
 	<% end %>
+	</div>
+	</div>
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h2 class="panel-title">Pledges (Total: <%= number_to_currency(@user.total_pledge) %>)</h2>
+		</div>
+		<div class="panel-body">
+			<%= form_for [@user, Pledge.new] do |f| %>
+				<div class="notice"><%= notice %></div>
+				<div class="input-group">
+					<%= f.label :name, "Name" %><br />
+					<%= f.text_field :name, class: "form-control", autocomplete: "off" %>
+				</div>
+				<div class="input-group">
+					<%= f.label :event_id, "Event" %><br />
+					<%= f.collection_select(:event_id, @user.events, :id, :address) %>
+				</div>
+				<div class="input-group">
+				<%= f.label :amount, "Amount" %>
+				<%= f.text_field :amount, class: "form-control", autocomplete: "off" %>
+				</div>
+				<hr>
+				<%= submit_tag("Send Pledge", :class=>"btn btn-primary")%>
+			<% end %>
+			<br />
+		<div>
+			<% if @user.pledges.empty? %>
+			<% else %>
+				<div id="messages">
+					<%= render partial: @user.pledges.reverse %>
+				</div>
+			<% end %>
+		</div>
+	</div>
 </div>
