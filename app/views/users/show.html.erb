@@ -9,37 +9,45 @@
 		<div class="panel-heading">
 		<h2 class="panel-title"><%= @user.first_name %>'s Events:</h2></div>
 		<div class="panel-body">
-		<table>
-			<tr>
-				<th>Location</th>
-				<th>Date</th>
-				<th>Time</th>
-			</tr>
-			<% if @user.events.empty? %>
-				<tr><td colspan="3">This user has not signed up for any events yet.</td></tr>
-			<% else %>
-				<% @user.events.sort_by {|h| [h["date"],h["time"]]}.each do |event| %>
-				<tr>
-					<% location = event.address + ", " + event.city + ", " + event.state %>
-					<td class="cell"><%= link_to location, controller: "events", action: "show", id: event.id %></td>
-					<td class="cell"><%= event.date.to_date %></td>
-					<td class="cell"><%= event.date.to_s(:time) %></td>
-					<% if @logged_in && (@current_user.id == @user.id) %>
-						<td>
-							<%= form_tag({controller: 'events', action: 'unenroll'}, method: 'post') do %>
-							<%= hidden_field_tag(:event_id, event.id) %>
-							<%= hidden_field_tag(:user_id, @current_user.id) %>
-							<div class="btn-group btn-group-xs"><button type="submit" class="btn btn-danger">
-								<span class="glyphicon glyphicon-remove"></span> Remove
-							</button>
-							</div>
+			<div class="row">
+				<div class="col-md-8">
+					<table class="table">
+					  <thead>
+						<tr>
+							<th>Location</th>
+							<th>Date</th>
+							<th>Time</th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<% if @user.events.empty? %>
+							<tr><td colspan="3">This user has not signed up for any events yet.</td></tr>
+						<% else %>
+							<% @user.events.sort_by {|h| [h["date"],h["time"]]}.each do |event| %>
+							<tr>
+								<% location = event.address + ", " + event.city + ", " + event.state %>
+								<td><%= link_to location, controller: "events", action: "show", id: event.id %></td>
+								<td><%= event.date.strftime("%B, %d, %Y") %></td>
+								<td><%= event.date.strftime("%I:%M %p") %></td>
+								<% if @logged_in && (@current_user.id == @user.id) %>
+									<td>
+										<%= form_tag({controller: 'events', action: 'unenroll'}, method: 'post') do %>
+										<%= hidden_field_tag(:event_id, event.id) %>
+										<%= hidden_field_tag(:user_id, @current_user.id) %>
+										<div class="btn-group btn-group-xs"><button type="submit" class="btn btn-danger">
+											<span class="glyphicon glyphicon-remove"></span> Remove
+										</button>
+										</div>
+										<% end %>
+									</td>
+								<% end %>
+							</tr>
 							<% end %>
-						</td>
-					<% end %>
-				</tr>
-				<% end %>
-			<% end %>
-		</table>
+						<% end %>
+					  </tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="panel panel-info">

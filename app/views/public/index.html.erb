@@ -1,23 +1,27 @@
 <div class="well">
 <h1>Charity Fundraiser</h1>
 <h2>Events</h2>
-<table>
-  <tr>
-	<th>Location</th>
-	<th>Date</th>
-	<th>Time</th>
-	<th>Participants</th>
-	<th>Pledges</th>
-  </tr>
-<% @events.each do |event| %>
-  <tr class="<%= cycle('even-row','odd-row') %>">
-	<% location = event.address + ", " + event.city + ", " + event.state %>
-	<td class=""><%= link_to location, controller: 'events', action: 'show', id: event.id %></td>
-	<td class="cell col-sm-3"><%= event.date.to_date %></td>
-	<td class="cell col-sm-3"><%= event.date.to_s(:time) %></td>
-	<td class="cell-right col-sm-3"><%= event.users.count %></td>
-	<td><%= number_to_currency(event.total_pledge) %></td>
-  </tr>
-<% end %>
+<table class="table table-striped">
+  <thead>
+	  <tr>
+		<th>Location</th>
+		<th>Date</th>
+		<th>Time</th>
+		<th>Participants</th>
+		<th>Pledges</th>
+	  </tr>
+  </thead>
+  <tbody>
+	<% @events.each do |event| %>
+	  <tr>
+		<% location = event.address + ", " + event.city + ", " + event.state %>
+		<td><%= link_to location, controller: 'events', action: 'show', id: event.id %></td>
+		<td><%= event.date.strftime("%B, %d, %Y") %></td>
+		<td><%= event.date.strftime("%I:%M %p") %></td>
+		<td><%= event.users.count %></td>
+		<td><%= number_to_currency(event.total_pledge) %></td>
+	  </tr>
+	<% end %>
+</tbody>
 </table>
 </div>
