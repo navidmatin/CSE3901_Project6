@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131130214749) do
+ActiveRecord::Schema.define(:version => 20131203152015) do
 
   create_table "events", :force => true do |t|
     t.datetime "date"
@@ -41,9 +41,9 @@ ActiveRecord::Schema.define(:version => 20131130214749) do
     t.integer  "user_id"
     t.integer  "event_id"
     t.string   "name"
-    t.decimal  "amount",     :precision => 8, :scale => 2
-    t.datetime "created_at",                               :null => false
-    t.datetime "updated_at",                               :null => false
+    t.decimal  "amount"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "pledges", ["event_id"], :name => "index_pledges_on_event_id"

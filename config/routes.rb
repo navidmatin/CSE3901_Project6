@@ -1,5 +1,7 @@
 Project6::Application.routes.draw do
 
+  resources :pledges
+
   match "events/sign_up" => "events#sign_up"
   match "events/unenroll" => "events#unenroll"
   resources :events

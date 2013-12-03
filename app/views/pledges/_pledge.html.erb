@@ -1,0 +1,9 @@
+<%= div_for pledge do %>
+	<div class="panel panel-success">
+		<div class="panel-heading">
+		<p class="panel-title"><strong>Posted <%= time_ago_in_words(pledge.created_at) %> ago by <%= pledge.name.upcase %></strong></p></div>
+		<div class="panel-body">
+		<%= number_to_currency(pledge.amount) %>
+		</div>
+	</div>
+<% end %>
