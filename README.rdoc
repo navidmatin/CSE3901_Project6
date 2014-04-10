@@ -1,1 +1,4 @@
 A small ruby web app with simple events page
+By 
+TJ Van Earten
+Navid SeyedMatin
